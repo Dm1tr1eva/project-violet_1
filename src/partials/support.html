@@ -1,0 +1,62 @@
+<section>
+  <div>
+    <h2>Залишились питання? Зв'яжіться з нами!</h2>
+    <h3>Ми тут, щоб допомогти!</h3>
+    <form>
+      <div>
+        <label for="user-name" class="form-label">Name</label>
+        <div class="inputposition">
+          <input type="text" name="user-name" id="user-name" />
+        </div>
+      </div>
+      <div>
+        <label for="email-user">Email</label>
+        <div class="inputposition">
+          <input
+            class="form-input"
+            type="email"
+            id="email-user"
+            name="email-user"
+          />
+        </div>
+      </div>
+      <div>
+        <label for="user-comment">Comment</label>
+        <textarea
+          name="user-comment"
+          placeholder="Text input"
+          id="user-comment"
+          rows="7"
+        ></textarea>
+      </div>
+
+      <button type="submit">Надіслати</button>
+    </form>
+  </div>
+  <div>
+    <picture>
+      <source
+        srcset="
+          /img/support/desk/supportimg.jpg    1x,
+          /img/support/desk/supportimg@2x.jpg 2x
+        "
+        media="(min-width: 1440px)"
+      />
+      <source
+        srcset="
+          ./img/support/tab/supportimg.jpg    1x,
+          ./img/support/tab/supportimg@2x.jpg 2x
+        "
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="
+          ./img/support/mob/supportimg.jpg    1x,
+          ./img/support/mob/supportimg@2x.jpg 2x
+        "
+        media="(max-width: 767px)"
+      />
+      <img src="./img/support/mob/supportimg.jpg" alt="Banking App" />
+    </picture>
+  </div>
+</section>
