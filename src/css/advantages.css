@@ -52,6 +52,7 @@
   line-height: 1.6;
   color: #030a06;
   margin-bottom: 48px;
+  font-family: Fira Sans;
 }
 
 .advantage-section-subtitle {
@@ -131,10 +132,21 @@
   }
   .advantage-section-subtitle {
     font-size: 32px;
+    margin-bottom: 24px;
   }
   .advantage-section-imagine-and-descriptoin-block {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+  }
+  .advantage-section-text-description {
+    font-size: 18px;
+    margin-bottom: 80px;
+  }
+  .advantage-section-name-text {
+    margin-bottom: 16px;
+  }
+  .position {
+    margin-top: 0;
   }
 }
