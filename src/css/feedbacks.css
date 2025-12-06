@@ -86,6 +86,6 @@
   }
   .feedbacks__coment {
     justify-content: space-between;
-    height: 134px;
+    min-height: 134px;
   }
 }
