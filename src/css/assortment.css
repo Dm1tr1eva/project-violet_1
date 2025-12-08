@@ -1,156 +1,114 @@
 :root {
     --bg: #EBF8ED;
     --text: #030A06;
+
     --inner-w: 1312px;
+
     --img-w: 310px;
     --img-h: 372px;
+
     --col-gap: 24px;
     --row-gap: 64px;
+
     --btn-w: 310px;
     --btn-h: 40px;
 }
 
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0
- }
-
-html,
-body {
-    height: 100%
-}
-
-body {
-    font-family: "Fira Sans", sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+/* ------- MOBILE FIRST ------- */
 
 .assortment {
+    padding: 48px 0;
     background: var(--bg);
-    padding-top: 64px;
-    padding-bottom: 64px;
 }
 
 .assortment__inner {
-    width: var(--inner-w);
+    width: 100%;
     max-width: calc(100% - 40px);
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 .assortment__title {
     font-family: "Comfortaa", cursive;
     font-weight: 700;
-    font-size: 48px;
-    line-height: 120%;
+    font-size: 32px;
     text-align: center;
-    margin: 0 0 32px;
-    color: var(--text);
+    margin-bottom: 24px;
 }
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: var(--col-gap);
-    row-gap: var(--row-gap);
-    grid-auto-rows: 1fr;
-    /* equal row height so buttons align */
-    align-items: start;
+    grid-template-columns: 1fr;
+    row-gap: 40px;
 }
 
 .product-card {
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* ключевое — карточки становятся ровными */
     height: 100%;
-    /* fill grid row */
 }
 
 .product-media {
     width: 100%;
-    max-width: var(--img-w);
-    overflow: hidden;
     border-radius: 22px;
-    margin: 0 auto;
+    overflow: hidden;
 }
 
 .product-media img {
-    display: block;
-    width: var(--img-w);
-    height: var(--img-h);
+    width: 100%;
+    height: 260px;
     object-fit: cover;
 }
 
 .product-body {
-    width: 100%;
-    max-width: var(--img-w);
+    padding-top: 12px;
+    text-align: center;
+
+    /* фиксированная высота — ТРЮК для выравнивания */
+    height: 120px;
+
+    /* чтобы текст не вылазил */
     display: flex;
     flex-direction: column;
-    padding-top: 16px;
-    box-sizing: border-box;
-    flex: 1;
+    justify-content: flex-start;
 }
-
-
-
 
 .product-name {
-    font-family: "Fira Sans", sans-serif;
     font-weight: 600;
     font-size: 18px;
-    line-height: 160%;
-    margin: 0 0 16px;
-    text-align: center;
+    margin-bottom: 12px;
 }
-
 
 .product-desc {
-    font-family: "Fira Sans", sans-serif;
-    font-weight: 400;
     font-size: 14px;
     line-height: 160%;
-    margin: 0;
-    text-align: center;
-
-    margin-bottom: 24px;
+    margin-bottom: auto;
+    /* чтобы не раздвигало блок */
 }
-
 
 .product-meta {
     margin-top: auto;
+    /* самая важная строка — прижимает низ */
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 12px;
 }
 
-
 .product-price {
-    font-family: "Fira Sans", sans-serif;
     font-weight: 600;
     font-size: 20px;
-    margin: 0;
 }
 
-
 .product-btn {
-    width: var(--btn-w);
+    width: 100%;
     height: var(--btn-h);
-    background: transparent;
     border: 1px solid var(--text);
+    background: transparent;
     border-radius: 6px;
-    color: var(--text);
-    font-family: "Fira Sans", sans-serif;
-    font-weight: 400;
     font-size: 16px;
     cursor: pointer;
-    padding: 0 16px;
     transition: transform .12s ease, box-shadow .12s ease;
 }
 
@@ -159,16 +117,18 @@ body {
     box-shadow: 0 6px 18px rgba(3, 10, 6, 0.06);
 }
 
-@media (max-width:1439px) {
-    .assortment__inner {
-        width: 90%;
+/* ------- TABLET ≥ 768px ------- */
+
+@media (min-width: 768px) {
+
+    .assortment__title {
+        font-size: 40px;
     }
 
     .products-grid {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 32px;
         row-gap: 48px;
-        grid-auto-rows: auto;
     }
 
     .product-media img {
@@ -180,37 +140,73 @@ body {
     }
 }
 
-@media (max-width:767px) {
-    .assortment__inner {
-        width: calc(100% - 40px);
-        padding: 0 20px;
+/* ------- DESKTOP ≥ 1440px ------- */
+
+@media (min-width: 1440px) {
+
+    .assortment {
+        padding: 64px 0;
     }
 
-    .products-grid {
-        grid-template-columns: 1fr;
-        column-gap: 20px;
-        row-gap: 40px;
-        grid-auto-rows: auto;
+    .assortment__inner {
+        max-width: var(--inner-w);
     }
 
     .assortment__title {
-        font-size: 36px;
-        margin-bottom: 24px;
+        font-size: 48px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: var(--col-gap);
+        row-gap: var(--row-gap);
     }
 
     .product-media img {
-        width: 100%;
-        height: 260px;
-        max-width: none;
+        width: var(--img-w);
+        height: var(--img-h);
     }
 
     .product-body {
-        max-width: none;
-        padding-top: 12px;
+        max-width: var(--img-w);
+        height: 140px;
+        /* выше, чтобы текст не полз */
     }
 
     .product-btn {
-        width: 100%;
-        max-width: none;
+        width: var(--btn-w);
     }
+}
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+/* фиксированная зона текста — одинаковая высота для всех */
+.product-body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+
+    /* ВАЖНО: делаем единую высоту, чтобы текст не двигал кнопку */
+    min-height: 180px;
+    /* мобильная */
+}
+
+/* описание не должно толкать кнопку */
+.product-desc {
+    flex-grow: 1;
+}
+
+/* блок с ценой и кнопкой — прижат вниз */
+.product-meta {
+    margin-top: auto;
+    /* ГЛАВНЫЙ ТРИК — кнопка всегда внизу */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
 }
