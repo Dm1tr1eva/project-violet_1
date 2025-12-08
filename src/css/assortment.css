@@ -25,7 +25,7 @@
   justify-content: space-between;
 }
 .assortment__image {
-  border-radius: 31px;
+  border-radius: 32px;
 }
 .assortment__contet__description {
   margin: 16px auto 0;
@@ -69,6 +69,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: transparent;
 }
 
 @media only screen and (min-width: 768px) {
