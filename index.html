@@ -18,6 +18,17 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <link rel="preload" as="image" href="/project-violet_1/assets/desc-hero--E3KGa-J.webp"
+      imagesrcset="/img/hero/desc-hero.webp , /img/hero/desc-hero@2x.webp 2x" media="(min-width: 1440px)">
+
+      <link rel="preload" as="image" href="/project-violet_1/assets/tab-hero-BnhyjNaF.webp"
+        imagesrcset="/img/hero/tab-hero.webp, /img/hero/tab-hero@2x.webp 2x"
+        media="(min-width: 768px)">
+
+        <link rel="preload" as="image" href="/project-violet_1/assets/phone-hero-dtW2iU9k.webp"
+          imagesrcset="/img/hero/phone-hero.webp, /img/hero/phone-hero@2x.webp 2x" 
+          media="(max-width: 767px)">
     <script type="module" crossorigin src="/project-violet_1/index.js"></script>
     <link rel="stylesheet" crossorigin href="/project-violet_1/assets/index-uxPBIaI5.css">
   </head>
@@ -167,10 +178,20 @@
             </div>
         </div>
         <picture>
-            <source media="(min-width: 1440px)" srcset="/project-violet_1/assets/desc-hero--E3KGa-J.webp, /project-violet_1/assets/desc-hero@2x-D2RYB5eF.webp 2x">
-            <source media="(min-width: 768px)" srcset="/project-violet_1/assets/tab-hero-BnhyjNaF.webp, /project-violet_1/assets/tab-hero@2x-CF-CRjQc.webp 2x">
+            <source media="(min-width: 1440px)" srcset="/project-violet_1/assets/desc-hero--E3KGa-J.webp, /project-violet_1/assets/desc-hero@2x-D2RYB5eF.webp 2x" 
+            width="1312" 
+            height="498">
+            <source media="(min-width: 768px)" srcset="/project-violet_1/assets/tab-hero-BnhyjNaF.webp, /project-violet_1/assets/tab-hero@2x-CF-CRjQc.webp 2x" 
+            width="704" 
+            height="267">
             <source media="(max-width: 768px)" srcset="/project-violet_1/assets/phone-hero-dtW2iU9k.webp, /project-violet_1/assets/phone-hero-dtW2iU9k.webp 2x">
-            <img class="hero__image" src="/project-violet_1/assets/phone-hero-dtW2iU9k.webp" alt="two eco bags">
+            <img class="hero__image" src="/project-violet_1/assets/phone-hero-dtW2iU9k.webp" 
+            alt="two eco bags"
+            fetchpriority="high"
+            width="288" 
+            height="285"
+            >
+            
         </picture>
     </div>
     
