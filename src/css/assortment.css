@@ -27,8 +27,18 @@
 .assortment__image {
   border-radius: 32px;
 }
-.assortment__contet__description {
-  margin: 16px auto 0;
+.assortment__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.assortment__info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+  margin-top: 8px;
 }
 .assortment__name {
   font-family: 'Fira Sans', sans-serif;
@@ -37,6 +47,7 @@
   line-height: 1.6;
   text-align: center;
   color: #030a06;
+  margin-top: 16px;
 }
 .assortment__description {
   font-family: 'Fira Sans', sans-serif;
@@ -45,6 +56,7 @@
   line-height: 1.6;
   text-align: center;
   color: #030a06;
+  padding: 0 8px;
 }
 .assortment__price {
   font-family: 'Fira Sans', sans-serif;
@@ -53,7 +65,6 @@
   line-height: 1.6;
   text-align: center;
   color: #030a06;
-  margin: 8px auto 16px;
 }
 .assortment__button {
   width: 100%;
@@ -85,6 +96,9 @@
 }
 
 @media only screen and (min-width: 1440px) {
+  .assortment__title {
+    font-size: 48px;
+  }
   .assortment__list {
     row-gap: 64px;
   }
