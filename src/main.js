@@ -1,3 +1,4 @@
+import './js/support';
 let a = document.getElementById('mobile-menu-is-open');
 let b = document.getElementById('mobile-menu');
 let c = document.getElementById('mobile-menu-close');
