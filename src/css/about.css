@@ -87,7 +87,8 @@
     margin-bottom: 16px;
   }
   .about-title-one {
-    margin-bottom: 24px;
+    margin: 0 auto 24px;
     font-size: 56px;
+    max-width: 629px;
   }
 }
